@@ -678,7 +678,6 @@ fn descriptor_binding_requirements_of(spirv: &Spirv, variable_id: Id) -> Descrip
                     Instruction::TypeInt {
                         width, signedness, ..
                     } => {
-                        assert_eq!(width, 32); // TODO: 64-bit components
                         match signedness {
                             0 => NumericType::Uint,
                             1 => NumericType::Int,
